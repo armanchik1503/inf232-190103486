@@ -18,6 +18,9 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/fm.revealator.jquery.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/stylewitcher.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
 
     <!-- CSS Skin File -->
     <link href="css/skins/green.css" rel="stylesheet">
@@ -105,8 +108,8 @@
             </li>
             <li class="icon-box">
                 <i class="fa fa-envelope-open"></i>
-                <a href="{{route('contact')}}">
-                    <h2>Contact</h2>
+                <a href="{{route('post.index')}}">
+                    <h2>Posts</h2>
                 </a>
             </li>
         </ul>
@@ -123,7 +126,6 @@
                     <li><a href="{{route('about')}}"><i class="fa fa-user"></i><span>About</span></a></li>
                     <li><a href="portfolio.html"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
                     <li><a href="contact.html"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
-                    <li><a href="blog.html"><i class="fa fa-comments"></i><span>Blog</span></a></li>
                 </ul>
             </div>
         </nav>
@@ -144,6 +146,8 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/custom.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
 </body>
 

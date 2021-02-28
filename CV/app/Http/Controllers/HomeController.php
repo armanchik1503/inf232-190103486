@@ -18,7 +18,7 @@ class HomeController extends Controller
         return view('portfolio');
     }
 
-    public function contact(){
+    /*public function contact(){
         return view('contact');
-    }
+    }*/
 }

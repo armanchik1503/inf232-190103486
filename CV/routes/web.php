@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
 Route::get('/portfolio', [App\Http\Controllers\HomeController::class, 'portfolio'])->name('portfolio');
-Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
+//Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
+Route::get('/post', [App\Http\Controllers\PostController::class, 'index'])->name('post.index');
+Route::get('/post/create', [App\Http\Controllers\PostController::class, 'create'])->name('post.create');
+Route::post('/post/store', [App\Http\Controllers\PostController::class, 'store'])->name('post.store');
 
 
