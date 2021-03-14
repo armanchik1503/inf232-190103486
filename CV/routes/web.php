@@ -21,6 +21,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/portfolio', [HomeController::class, 'portfolio'])->name('portfolio');
 //Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
+Route::get('/post/{id}', [PostController::class, 'get_post']);
+
 Route::get('/post', [PostController::class, 'index'])->name('post.index');
 Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
 Route::post('/post/store', [PostController::class, 'store'])->name('post.store');

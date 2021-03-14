@@ -46,6 +46,14 @@ class PostController extends Controller
         return redirect()->route('post.index')->withSuccess('Категория была успешно добавлена!');
     }
 
+    public function get_post($id){
+        $post  = Post::find($id);
+        if ($post == null) {
+            # code...
+            return response(['message' => 'client not found'], 404);
+        }
+        return view('post.detail')->with(['post' => $post]);
+    }
     /**
      * Display the specified resource.
      *
@@ -90,4 +98,5 @@ class PostController extends Controller
     {
         //
     }
+
 }

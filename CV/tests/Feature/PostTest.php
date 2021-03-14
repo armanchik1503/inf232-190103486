@@ -35,6 +35,17 @@ class PostTest extends TestCase
     {
         $response = $this->get('/post/1');
 
-        $response->assertViewHas('portfolio');
+        $response->assertViewHas('post');
     }
+    public function test_post_ok()
+    {
+        $response = $this->get('/post/1');
+        $response->assertOk();
+    }
+    public function test_post_succesfully()
+    {
+        $response = $this->get('/post/1');
+        $response->assertSuccessful();
+    }
+
 }
