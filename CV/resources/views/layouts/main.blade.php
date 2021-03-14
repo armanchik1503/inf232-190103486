@@ -12,18 +12,18 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700" rel="stylesheet">
 
     <!-- Template CSS Files -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/preloader.min.css" rel="stylesheet">
-    <link href="css/circle.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/fm.revealator.jquery.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/stylewitcher.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/preloader.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/circle.css')}}" rel="stylesheet">
+    <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/fm.revealator.jquery.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('css/stylewitcher.css')}}" rel="stylesheet">
+
 
 
     <!-- CSS Skin File -->
-    <link href="css/skins/green.css" rel="stylesheet">
+    <link href="{{asset('css/skins/green.css')}}" rel="stylesheet">
 
     <!-- Live Style Switcher - demo only -->
     <link rel="alternate stylesheet" type="text/css" title="blue" href="css/skins/blue.css" />
@@ -36,10 +36,10 @@
     <link rel="alternate stylesheet" type="text/css" title="purple" href="css/skins/purple.css" />
     <link rel="alternate stylesheet" type="text/css" title="red" href="css/skins/red.css" />
     <link rel="alternate stylesheet" type="text/css" title="yellowgreen" href="css/skins/yellowgreen.css" />
-    <link rel="stylesheet" type="text/css" href="css/styleswitcher.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('css/styleswitcher.css')}}" />
 
     <!-- Modernizr JS File -->
-    <script src="js/modernizr.custom.js"></script>
+    <script src="{{asset('js/modernizr.custom.js')}}"></script>
 </head>
 
 <body class="home light">
@@ -91,65 +91,71 @@
             <li class="icon-box active">
                 <i class="fa fa-home"></i>
                 <a href="{{route('home')}}">
-                    <h2>Home</h2>
-                </a>
-            </li>
-            <li class="icon-box">
-                <i class="fa fa-user"></i>
-                <a href="{{route('about')}}">
-                    <h2>About</h2>
-                </a>
-            </li>
-            <li class="icon-box">
-                <i class="fa fa-briefcase"></i>
-                <a href="{{route('portfolio')}}">
-                    <h2>Portfolio</h2>
-                </a>
-            </li>
-            <li class="icon-box">
-                <i class="fa fa-envelope-open"></i>
-                <a href="{{route('post.index')}}">
-                    <h2>Posts</h2>
-                </a>
-            </li>
-        </ul>
-        <!-- Fixed Navigation Ends -->
-        <!-- Mobile Menu Starts -->
-        <nav role="navigation" class="d-block d-lg-none">
-            <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <ul class="list-unstyled" id="menu">
-                    <li class="active"><a href="{{route('home')}}"><i class="fa fa-home"></i><span>Home</span></a></li>
-                    <li><a href="{{route('about')}}"><i class="fa fa-user"></i><span>About</span></a></li>
-                    <li><a href="portfolio.html"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
-                    <li><a href="contact.html"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Mobile Menu Ends -->
+    <h2>Home</h2>
+    </a>
+    </li>
+    <li class="icon-box">
+        <i class="fa fa-user"></i>
+        <a href="{{route('about')}}">
+            <h2>About</h2>
+        </a>
+    </li>
+    <li class="icon-box">
+        <i class="fa fa-briefcase"></i>
+        <a href="{{route('portfolio')}}">
+            <h2>Portfolio</h2>
+        </a>
+    </li>
+    <li class="icon-box">
+        <i class="fa fa-envelope-open"></i>
+        <a href="{{route('post.index')}}">
+            <h2>Posts</h2>
+        </a>
+    </li>
+    <li class="icon-box">
+        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+        <a href="{{route('blog.index')}}">
+            <h2>Blogs</h2>
+        </a>
+    </li>
+    </ul>
+    <!-- Fixed Navigation Ends -->
+    <!-- Mobile Menu Starts -->
+    <nav role="navigation" class="d-block d-lg-none">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="list-unstyled" id="menu">
+                <li class="active"><a href="{{route('home')}}"><i class="fa fa-home"></i><span>Home</span></a></li>
+                <li><a href="{{route('about')}}"><i class="fa fa-user"></i><span>About</span></a></li>
+                <li><a href="portfolio.html"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
+                <li><a href="contact.html"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Mobile Menu Ends -->
     </header>
 
     @yield('content')
 
-    <script src="js/jquery-3.5.0.min.js"></script>
-    <script src="js/styleswitcher.js"></script>
-    <script src="js/preloader.min.js"></script>
-    <script src="js/fm.revealator.jquery.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpGridGallery.js"></script>
-    <script src="js/jquery.hoverdir.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{{asset('js/jquery-3.5.0.min.js')}}"></script>
+    <script src="{{asset('js/styleswitcher.js')}}"></script>
+    <script src="{{asset('js/preloader.min.js')}}"></script>
+    <script src="{{asset('js/fm.revealator.jquery.min.js')}}"></script>
+    <script src="{{asset('js/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{asset('js/masonry.pkgd.min.js')}}"></script>
+    <script src="{{asset('js/classie.js')}}"></script>
+    <script src="{{asset('js/cbpGridGallery.js')}}"></script>
+    <script src="{{asset('js/jquery.hoverdir.js')}}"></script>
+    <script src="{{asset('js/popper.min.js')}}"></script>
+    <script src="{{asset('js/bootstrap.js')}}"></script>
+    <script src="{{asset('js/custom.js')}}"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
-</body>
+
+    </body>
 
 
 </html>

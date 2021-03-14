@@ -2,10 +2,9 @@
 
 
 @section('content')
-
-<a href="{{route('post.create')}}" style="display: flex;
+<a href="{{route('blog.create')}}" style="display: flex;
     justify-content: center;">
-    <h2>Создать новый пост</h2>
+    <h2>Создать новый блог</h2>
 </a>
 @if (session('success'))
 <div class="alert alert-success" role="alert">
@@ -17,7 +16,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Все посты</h1>
+                <h1 class="m-0">Блоги</h1>
             </div><!-- /.col -->
         </div><!-- /.row -->
     </div><!-- /.container-fluid -->
@@ -43,16 +42,16 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($posts as $post)
+                            @foreach($blogs as $blog)
                             <tr>
                                 <td>
-                                    {{$post['id']}}
+                                    {{$blog['id']}}
                                 </td>
                                 <td>
-                                    {{$post['title']}}
+                                    {{$blog['title']}}
                                 </td>
                                 <td>
-                                    {{$post['body']}}
+                                    {{$blog['description']}}
                                 </td>
                                 <td>
                                 </td>

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('created_at', 'desc')->get();
-        return view('post.index', [
-            'posts' => $posts,
+        $blogs = Blog::orderBy('created_at', 'desc')->get();
+        return view('blog.index', [
+            'blogs' => $blogs,
         ]);
     }
 
@@ -27,7 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('post.create');
+        return view('blog.create');
     }
 
     /**
@@ -38,12 +38,12 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $new_post = new Post();
-        $new_post->title = $request->title;
-        $new_post->body = $request->body;
-        $new_post->save();
+        $new_blog = new Blog();
+        $new_blog->title = $request->title;
+        $new_blog->description = $request->description;
+        $new_blog->save();
 
-        return redirect()->route('post.index')->withSuccess('Категория была успешно добавлена!');
+        return redirect()->route('blog.index')->withSuccess('Категория была успешно добавлена!');
     }
 
     /**
