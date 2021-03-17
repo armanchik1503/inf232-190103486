@@ -23,10 +23,10 @@ Route::get('/portfolio', [HomeController::class, 'portfolio'])->name('portfolio'
 //Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
 Route::get('/post/{id}', [PostController::class, 'get_post']);
 
-Route::get('/post', [PostController::class, 'index'])->name('post.index');
+Route::get('/posts/index', [PostController::class, 'index'])->name('post.index');
 Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
 Route::post('/post/store', [PostController::class, 'store'])->name('post.store');
 
-Route::get('/blog/index', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blogs/index', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/create', [BlogController::class, 'create'])->name('blog.create');
 Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store');
