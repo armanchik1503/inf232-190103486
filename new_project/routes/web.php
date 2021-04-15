@@ -19,7 +19,7 @@ use App\Http\Controllers\MailController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/upload', [UploadFileController::class, 'index']);
+Route::get('/upload', [UploadFileController::class, 'index'])->name('upload-index');
 Route::post('/upload', [UploadFileController::class, 'store'])->name('upload-store');
 Route::get('/accounts',[AccountsInfoController::class, 'index'])->name('accounts');
-Route::get('/send-email', [MailController::class, 'sendEmail']);
+Route::get('/send-email/{id}', [MailController::class, 'sendEmail'])->name('send-email');

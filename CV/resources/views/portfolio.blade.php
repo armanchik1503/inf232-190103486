@@ -3,8 +3,8 @@
 @section('content')
 
 <section class="title-section text-left text-sm-center revealator-slideup revealator-once revealator-delay1">
-    <h1>my <span>portfolio</span></h1>
-    <span class="title-bg">works</span>
+    <h1>@lang('main.my') <span>@lang('main.mf')</span></h1>
+    <span class="title-bg">@lang('main.works')</span>
 </section>
 <!-- Page Title Ends -->
 <!-- Main Content Starts -->

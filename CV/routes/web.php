@@ -16,8 +16,10 @@ use App\Http\Controllers\BlogController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::middleware(['set_locale'])->group(function(){
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/locale/{locale}', [HomeController::class, 'changeLocal'])->name('local');
+
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/portfolio', [HomeController::class, 'portfolio'])->name('portfolio');
 //Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
@@ -30,3 +32,4 @@ Route::post('/post/store', [PostController::class, 'store'])->name('post.store')
 Route::get('/blogs/index', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/create', [BlogController::class, 'create'])->name('blog.create');
 Route::post('/blog/store', [BlogController::class, 'store'])->name('blog.store');
+});

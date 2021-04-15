@@ -1,0 +1,37 @@
+<?php
+
+return [
+    'title' => 'Personal Portfolio',
+    'home' => 'home',
+    'about' => 'about',
+    'portfolio' => 'portfolio',
+    'posts' => 'posts',
+    'blogs' => 'blogs',
+    'hi' => 'hi there !',
+    'im' => "I'm",
+    'full_name' => 'Kaliakyn Arman',
+    'info' => "I'm a Aktobe based web designer & front‑end developer and back-end developer focused on crafting clean & user‑friendly experiences, I am passionate about building excellent software that improves the lives of those around me.",
+    'more' => 'more about me',
+    'my' => 'my',
+    'mf' => 'portfolio',
+    'works' => 'works',
+    'about' => 'ABOUT',
+    'me' => 'ME',
+    'resume' => 'Resume',
+    'pi' => 'personal infos',
+    'fn' => 'first name',
+    'ln' => 'last name',
+    'age' => 'Age',
+    'nat' => 'Nationality',
+    'freelance' => 'Freelance',
+    'add' => 'Address',
+    'phone' => 'phone',
+    'email' => 'Email',
+    'lang' => 'languages',
+    'yox' => 'years of experience',
+    'hc' => 'happy customers',
+    'cp' => 'completed project',
+    'aw' => 'awards won',
+    'ms' => 'my skills'
+
+];

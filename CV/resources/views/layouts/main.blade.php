@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Personal Portfolio</title>
+    <title>@lang('main.title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Template Google Fonts -->
@@ -86,56 +86,85 @@
     <!-- Live Style Switcher Ends - demo only -->
     <!-- Header Starts -->
     <header class="header" id="navbar-collapse-toggle">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-dark container">
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav ml-auto">
+                        @php $locale = session()->get('locale'); @endphp
+                        <li class="nav-item dropdown">
+                            <a style="color:black;" id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                @switch($locale)
+                                @case('ru')
+                                Russian
+                                @break
+                                @case('kz')
+                                Kazakh
+                                @break
+                                @default
+                                English
+                                @endswitch
+                                <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="locale/ru">Russian</a>
+                                <a class="dropdown-item" href="locale/kz">Kazakh</a>
+                                <a class="dropdown-item" href="locale/en"> English</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
         <!-- Fixed Navigation Starts -->
         <ul class="icon-menu d-none d-lg-block revealator-slideup revealator-once revealator-delay1">
             <li class="icon-box active">
                 <i class="fa fa-home"></i>
                 <a href="{{route('home')}}">
-    <h2>Home</h2>
-    </a>
-    </li>
-    <li class="icon-box">
-        <i class="fa fa-user"></i>
-        <a href="{{route('about')}}">
-            <h2>About</h2>
-        </a>
-    </li>
-    <li class="icon-box">
-        <i class="fa fa-briefcase"></i>
-        <a href="{{route('portfolio')}}">
-            <h2>Portfolio</h2>
-        </a>
-    </li>
-    <li class="icon-box">
-        <i class="fa fa-envelope-open"></i>
-        <a href="{{route('post.index')}}">
-            <h2>Posts</h2>
-        </a>
-    </li>
-    <li class="icon-box">
-        <i class="fa fa-paper-plane" aria-hidden="true"></i>
-        <a href="{{route('blog.index')}}">
-            <h2>Blogs</h2>
-        </a>
-    </li>
-    </ul>
-    <!-- Fixed Navigation Ends -->
-    <!-- Mobile Menu Starts -->
-    <nav role="navigation" class="d-block d-lg-none">
-        <div id="menuToggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-            <ul class="list-unstyled" id="menu">
-                <li class="active"><a href="{{route('home')}}"><i class="fa fa-home"></i><span>Home</span></a></li>
-                <li><a href="{{route('about')}}"><i class="fa fa-user"></i><span>About</span></a></li>
-                <li><a href="portfolio.html"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
-                <li><a href="contact.html"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
-            </ul>
-        </div>
-    </nav>
-    <!-- Mobile Menu Ends -->
+                    <h2>@lang('main.home')</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-user"></i>
+                <a href="{{route('about')}}">
+                    <h2>@lang('main.about')</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-briefcase"></i>
+                <a href="{{route('portfolio')}}">
+                    <h2>@lang('main.portfolio')</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-envelope-open"></i>
+                <a href="{{route('post.index')}}">
+                    <h2>@lang('main.posts')</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                <a href="{{route('blog.index')}}">
+                    <h2>@lang('main.blogs')</h2>
+                </a>
+            </li>
+        </ul>
+        <!-- Fixed Navigation Ends -->
+        <!-- Mobile Menu Starts -->
+        <nav role="navigation" class="d-block d-lg-none">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul class="list-unstyled" id="menu">
+                    <li class="active"><a href="{{route('home')}}"><i class="fa fa-home"></i><span>Home</span></a></li>
+                    <li><a href="{{route('about')}}"><i class="fa fa-user"></i><span>About</span></a></li>
+                    <li><a href="portfolio.html"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
+                    <li><a href="contact.html"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Mobile Menu Ends -->
     </header>
 
     @yield('content')
@@ -155,7 +184,7 @@
 
 
 
-    </body>
+</body>
 
 
 </html>

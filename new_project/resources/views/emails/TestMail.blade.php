@@ -9,8 +9,9 @@
 </head>
 
 <body>
-    <h3>Здравствуйте {{$details['Name']}}{{$details['Surname']}}</h3>
-    <h3>Ваш {{$details['Email']}}</h3>
+    <h3>Здравствуйте {{$account->name}} {{$account->surname}}</h3>
+    <h3>Ваш email {{$account->email}}</h3>
+    <img src="{{ $message->embed(public_path('storage/images/'.$account->filename))}}">
     <p>Thanks for you</p>
 </body>
 

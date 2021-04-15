@@ -3,8 +3,8 @@
 @section('content')
 
 <section class="title-section text-left text-sm-center revealator-slideup revealator-once revealator-delay1">
-    <h1>ABOUT <span>ME</span></h1>
-    <span class="title-bg">Resume</span>
+    <h1>@lang('main.about') <span>@lang('main.me')</span></h1>
+    <span class="title-bg">@lang('main.resume')</span>
 </section>
 <!-- Page Title Ends -->
 <!-- Main Content Starts -->
@@ -15,26 +15,26 @@
             <div class="col-12 col-lg-5 col-xl-6">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="text-uppercase custom-title mb-0 ft-wt-600">personal infos</h3>
+                        <h3 class="text-uppercase custom-title mb-0 ft-wt-600">@lang('main.pi')</h3>
                     </div>
                     <div class="col-12 d-block d-sm-none">
                         <img src="img/ara.jpeg" class="img-fluid main-img-mobile" alt="my picture" style="width: 230px;" />
                     </div>
                     <div class="col-6">
                         <ul class="about-list list-unstyled open-sans-font">
-                            <li> <span class="title">first name :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Arman</span> </li>
-                            <li> <span class="title">last name :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Kaliakyn</span> </li>
-                            <li> <span class="title">Age :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">18 Years</span> </li>
-                            <li> <span class="title">Nationality :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Kazakh</span> </li>
-                            <li> <span class="title">Freelance :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Available</span> </li>
+                            <li> <span class="title">@lang('main.fn') :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Arman</span> </li>
+                            <li> <span class="title">@lang('main.ln') :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Kaliakyn</span> </li>
+                            <li> <span class="title">@lang('main.age') :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">18 Years</span> </li>
+                            <li> <span class="title">@lang('main.nat') :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Kazakh</span> </li>
+                            <li> <span class="title">@lang('main.freelance') :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Available</span> </li>
                         </ul>
                     </div>
                     <div class="col-6">
                         <ul class="about-list list-unstyled open-sans-font">
-                            <li> <span class="title">Address :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Aktobe</span> </li>
-                            <li> <span class="title">phone :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">+7747 747 47 74</span> </li>
-                            <li> <span class="title">Email :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">190103486@stu.sdu.edu.com</span> </li>
-                            <li> <span class="title">languages :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Kazakh, English, Russian, Turkish</span> </li>
+                            <li> <span class="title">@lang('main.add') :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Aktobe</span> </li>
+                            <li> <span class="title">@lang('main.phone') :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">+7747 747 47 74</span> </li>
+                            <li> <span class="title">@lang('main.email') :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">190103486@stu.sdu.edu.com</span> </li>
+                            <li> <span class="title">@lang('main.lang') :</span> <span class="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Kazakh, English, Russian, Turkish</span> </li>
                         </ul>
                     </div>
                     <div class="col-12 mt-3">
@@ -49,25 +49,25 @@
                     <div class="col-6">
                         <div class="box-stats with-margin">
                             <h3 class="poppins-font position-relative">3</h3>
-                            <p class="open-sans-font m-0 position-relative text-uppercase">years of <span class="d-block">experience</span></p>
+                            <p class="open-sans-font m-0 position-relative text-uppercase">@lang('main.yox') <span class="d-block"></span></p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="box-stats with-margin">
                             <h3 class="poppins-font position-relative">13</h3>
-                            <p class="open-sans-font m-0 position-relative text-uppercase">completed <span class="d-block">projects</span></p>
+                            <p class="open-sans-font m-0 position-relative text-uppercase">@lang('main.cp') <span class="d-block"></span></p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="box-stats">
                             <h3 class="poppins-font position-relative">3</h3>
-                            <p class="open-sans-font m-0 position-relative text-uppercase">Happy<span class="d-block">customers</span></p>
+                            <p class="open-sans-font m-0 position-relative text-uppercase">@lang('main.hc')<span class="d-block"></span></p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="box-stats">
                             <h3 class="poppins-font position-relative">5</h3>
-                            <p class="open-sans-font m-0 position-relative text-uppercase">awards <span class="d-block">won</span></p>
+                            <p class="open-sans-font m-0 position-relative text-uppercase">@lang('main.aw') <span class="d-block"></span></p>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
         <!-- Skills Starts -->
         <div class="row">
             <div class="col-12">
-                <h3 class="text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-left text-sm-center custom-title ft-wt-600">My Skills</h3>
+                <h3 class="text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-left text-sm-center custom-title ft-wt-600">@lang('main.ms')</h3>
             </div>
             <div class="col-6 col-md-3 mb-3 mb-sm-5">
                 <div class="c100 p100">

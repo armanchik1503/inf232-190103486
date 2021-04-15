@@ -11,80 +11,86 @@
 </head>
 
 <body>
-            <div class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1 class="m-0">Все пользователи</h1>
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
-        </div>
+    <div class="content-header">
+        <div class="container-fluid flex">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Все пользователи</h1>
+                    <a class="btn btn-info btn-sm" href="{{route('upload-index')}}">
+                        <i class="fas fa-pencil-alt">
+                            Add user
+                        </i>
+                    </a>
+                </div><!-- /.col -->
 
-        <section class="content">
-            <div class="container-fluid">
-                <section class="content">
-                    <div class="card">
-                        <div class="card-body p-0">
-                            <table class="table table-striped projects">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 5%">
-                                            ID
-                                        </th>
-                                        <th style="width: 15%">
-                                            Name
-                                        </th>
-                                        <th style="width: 15%">
-                                            Surname
-                                        </th>
-                                        <th style="width: 25%">
-                                            Email
-                                        </th>
-                                        <th style="width: 25%">
-                                            Photo
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach($accounts as $account)
-                                        <tr>
-                                            <td>
-                                                {{$account['id']}}
-                                            </td>
-                                            <td>
-                                                {{$account['name']}}
-                                            </td>
-                                            <td>
-                                                {{$account['surname']}}
-                                            </td>
-                                            <td>
-                                                {{$account['email']}}
-                                            </td>
-                                            <td>
-                                                <img style="width: 200px;height: 200px;" src="/storage/images/{{$account->filename}}" alt="{{$account->filename}}">
-                                            </td>
-                                            <td class="project-actions text-right">
-                                                <a class="btn btn-info btn-sm" href="#">
-                                                    <i class="fas fa-pencil-alt">
-                                                    </i>
-                                                    Редактировать
-                                                </a>
-                                                <a class="btn btn-danger btn-sm" href="#">
-                                                    <i class="fas fa-trash">
-                                                    </i>
-                                                    Удалить
-                                                </a>
-                                            </td>
-                                        </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
-                        </div>
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+
+    <section class="content">
+        <div class="container-fluid">
+            <section class="content">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <table class="table table-striped projects">
+                            <thead>
+                                <tr>
+                                    <th style="width: 5%">
+                                        ID
+                                    </th>
+                                    <th style="width: 15%">
+                                        Name
+                                    </th>
+                                    <th style="width: 15%">
+                                        Surname
+                                    </th>
+                                    <th style="width: 25%">
+                                        Email
+                                    </th>
+                                    <th style="width: 25%">
+                                        Photo
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($accounts as $account)
+                                <tr>
+                                    <td>
+                                        {{$account['id']}}
+                                    </td>
+                                    <td>
+                                        {{$account['name']}}
+                                    </td>
+                                    <td>
+                                        {{$account['surname']}}
+                                    </td>
+                                    <td>
+                                        {{$account['email']}}
+                                    </td>
+                                    <td>
+                                        <img style="width: 200px;height: 200px;" src="/storage/images/{{$account->filename}}" alt="{{$account->filename}}">
+                                    </td>
+                                    <td class="project-actions text-right">
+                                        <a class="btn btn-info btn-sm" href="{{route('send-email',$account->id)}}">
+                                            <i class="fas fa-pencil-alt">
+                                            </i>
+                                            Отправить email
+                                        </a>
+                                        <a class="btn btn-danger btn-sm" href="#">
+                                            <i class="fas fa-trash">
+                                            </i>
+                                            Удалить
+                                        </a>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
                     </div>
-                </section>
-            </div>
-        </section>
+                </div>
+            </section>
+        </div>
+    </section>
 
 </body>
 

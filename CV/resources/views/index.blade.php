@@ -9,10 +9,10 @@
         <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
             <div>
                 <img src="" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" />
-                <h6 class="text-uppercase open-sans-font mb-0 d-block d-sm-none d-lg-block">hi there !</h6>
-                <h1 class="text-uppercase poppins-font"><span>I'm</span> Kaliakyn Arman </h1>
-                <p class="open-sans-font">I'm a Aktobe based web designer & front‑end developer and back-end developer focused on crafting clean & user‑friendly experiences, I am passionate about building excellent software that improves the lives of those around me.</p>
-                <a href="about.html" class="btn btn-about">more about me</a>
+                <h6 class="text-uppercase open-sans-font mb-0 d-block d-sm-none d-lg-block">@lang('main.hi')</h6>
+                <h1 class="text-uppercase poppins-font"><span>@lang('main.im')</span> @lang('main.full_name') </h1>
+                <p class="open-sans-font">@lang('main.info')</p>
+                <a href="about.html" class="btn btn-about">@lang('main.more')</a>
             </div>
         </div>
     </div>

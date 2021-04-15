@@ -32,6 +32,8 @@
                                 <input type="file" style="margin-bottom: 20px;" class="form-controll" name="file" id="file">
                             </div>
                             <button type="submit" class="btn btn-success">Upload</button>
+                            <input type="email" class="newsletter_input" required="required" name="email">
+                            <button type="submit" class="newsletter_button trans_200"><span>Subscribe</span></button>
                         </form>
                     </div>
                 </div>
